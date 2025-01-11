@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta charset="utf-8"/>
+
+		<title>Cesium Ion Lunar Data Set</title>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			html {
+				overflow: hidden;
+				font-family: Arial, Helvetica, sans-serif;
+				user-select: none;
+			}
+
+			canvas {
+				image-rendering: pixelated;
+				outline: none;
+			}
+
+			#info {
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: white;
+				width: 100%;
+				text-align: center;
+				padding: 5px;
+				pointer-events: none;
+				line-height: 1.5em;
+			}
+
+			#info a {
+				color: white;
+				pointer-events: all;
+			}
+        </style>
+      <script type="module" crossorigin src="./assets/ionLunar-DBkH1-O2.js"></script>
+      <link rel="modulepreload" crossorigin href="./assets/three.module-CvwULque.js">
+      <link rel="modulepreload" crossorigin href="./assets/EnvironmentControls-1r8kezR_.js">
+      <link rel="modulepreload" crossorigin href="./assets/Ellipsoid-LZ-ZKZQp.js">
+      <link rel="modulepreload" crossorigin href="./assets/GlobeControls-C2UdnvQA.js">
+      <link rel="modulepreload" crossorigin href="./assets/readMagicBytes-Da5ueiou.js">
+      <link rel="modulepreload" crossorigin href="./assets/LoaderBase-CVSPpjX2.js">
+      <link rel="modulepreload" crossorigin href="./assets/GLTFLoader-nx88wwE7.js">
+      <link rel="modulepreload" crossorigin href="./assets/I3DMLoader-MN4j8OdF.js">
+      <link rel="modulepreload" crossorigin href="./assets/B3DMLoader-CD9oTgMD.js">
+      <link rel="modulepreload" crossorigin href="./assets/PNTSLoader-Dw0W6_Z8.js">
+      <link rel="modulepreload" crossorigin href="./assets/CMPTLoader-lyV0-C59.js">
+      <link rel="modulepreload" crossorigin href="./assets/GLTFExtensionLoader-XUNwtda-.js">
+      <link rel="modulepreload" crossorigin href="./assets/EllipsoidRegion-DxePPRoU.js">
+      <link rel="modulepreload" crossorigin href="./assets/TilesRenderer-B__2iXax.js">
+      <link rel="modulepreload" crossorigin href="./assets/GoogleCloudAuthPlugin-ByYp_pcn.js">
+      <link rel="modulepreload" crossorigin href="./assets/CesiumIonAuthPlugin-CCUgfpIV.js">
+      <link rel="modulepreload" crossorigin href="./assets/TileCompressionPlugin-D4njFejO.js">
+      <link rel="modulepreload" crossorigin href="./assets/UpdateOnChangePlugin-CElRVQKd.js">
+      <link rel="modulepreload" crossorigin href="./assets/TilesFadePlugin-Qr9WKzim.js">
+    </head>
+    <body>
+		<div id="info">
+			<div>
+				Lunar data demo courtesy of <a href="https://ion.cesium.com/">Cesium Ion</a>. API token required.
+			</div>
+		</div>
+    </body>
+</html>
