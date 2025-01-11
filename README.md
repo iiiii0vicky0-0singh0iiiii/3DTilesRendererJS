@@ -255,8 +255,18 @@ function renderLoop() {
 
 		needsRerender = false;
 		camera.updateMatrixWorld();
+            try {
 		tilesRenderer.update();
+                }
+    catch (error) {
+                console.error('Error during update', error);
+            }
+               try {
 		renderer.render( scene, camera );
+                   }
+              catch (error) {
+                console.error('Error during renderer.render()', error);
+            }
 
 	}
 
