@@ -35,5 +35,32 @@ describe( 'decodeOctNormal', () => {
 		expect( result.z ).toBeCloseTo( z, PRECISION );
 
 	} );
+	it('should throw an error for invalid inputs', () => {
+    const invalidInputs = [
+      [-1, 0],   // X out of range
+      [0, -1],   
+      [256, 0],  // X exceeds range
+      [0, 256],  
+      ['a', 0],  
+      [0, 'b'],  // Y is not a number
+    ];
 
-} );
+    invalidInputs.forEach(([encX, encY]) => {
+      expect(() => decodeOctNormal(encX, encY)).toThrow(
+        `Invalid input: (${encX}, ${encY})`
+      );
+    });
+  });
+
+  it('should have minimal performance overhead', () => {
+    const startTime = performance.now();
+    for (let i = 0; i <= 255; i++) {
+      for (let j = 0; j <= 255; j++) {
+        decodeOctNormal(i, j);
+      }
+    }
+    const endTime = performance.now();
+    expect(endTime - startTime).toBeLessThan(1000); // Performance threshold
+  });
+
+});
